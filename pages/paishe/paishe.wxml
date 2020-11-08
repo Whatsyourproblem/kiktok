@@ -1,0 +1,19 @@
+<!--pages/paishe/paishe.wxml-->
+<!-- 录制视频 -->
+<view class="paishe">
+  <view class="top">
+    <image src="/images/icon/back.png" bindtap="back"></image>
+    <image src="/images/icon/fanzhuan.png" class="fanzhuan" bindtap="fanzhuan"></image>
+  </view>
+  <!-- <camera device-position="{{devicePosition}}" 
+          flash="{{flash}}" 
+          binderror="error" 
+          class="camera">
+  </camera> -->
+  <view class="right">
+    <image src="/images/icon/xiangce.png" bindtap="getImageV">相册</image>
+  </view>
+  <view class="bottom">
+    <image src="/images/icon/circle.png">开始拍摄</image>
+  </view>
+</view>

@@ -1,0 +1,99 @@
+<!--pages/updateUserInfo/updateUserInfo.wxml-->
+<view class="head">
+  <view class="head-imgView" bindtap="goBack" wx:if="{{!updateView}}">
+    <image src="{{leftBackImg}}" class="leftBackImg" bindtap="goback"></image>
+  </view>
+  <view class="head-imgView" bindtap="goBack" wx:else>
+    <image src="{{leftBackImg}}" class="leftBackImg" bindtap="goInfo"></image>
+  </view>
+  <view class="head-attention">{{title}}</view>
+</view>
+<view wx:if="{{!updateView}}">
+  <view class="userImg-view">
+    <image src="{{userImg}}" class="userImg"></image>
+    <view class="addImg-view">
+      <image src="{{addImg}}" class="addImg" bindtap="updateHeadImg"></image>
+    </view>
+    <view class="changeImgInfo">点击更换头像</view>
+  </view>
+
+  <view class="updateInfoBody">
+    <view class="info" id="name" bindtap="updateInfo">
+      <view class="info-left">姓名</view>
+      <view class="info-right">{{currentName}}
+        <image src="{{rightOpImg}}" class="info-right-rightOpImg"></image>
+      </view>
+    </view>
+    <view class="info"  id="KIKID" bindtap="updateInfo">
+      <view class="info-left">KIK号</view>
+      <view class="info-right">{{currentID}}
+        <image src="{{rightOpImg}}" class="info-right-rightOpImg"></image>
+      </view>
+    </view>
+    <view class="info"  id="introductory" bindtap="updateInfo">
+      <view class="info-left">简介</view>
+      <view class="info-right">{{currentIntroductory}}
+        <image src="{{rightOpImg}}" class="info-right-rightOpImg"></image>
+      </view>
+    </view>
+    <view class="info"  id="sex">
+      <view class="info-left">性别</view>
+      <picker  
+        bindchange="bindPickerChange" 
+        value="{{index}}" 
+        range="{{array}}"
+        header-text="性别"
+        class="info-right">
+          {{array[index]}}
+        <image src="{{rightOpImg}}" class="info-right-rightOpImg"></image>
+      </picker>
+    </view>
+    <view class="info"  id="birthday">
+      <view class="info-left">生日</view>
+      <picker mode="date" 
+        class="info-right" 
+        value="{{currentBirthday}}" 
+        start="1996-09-01" 
+        end="{{currentTime}}"         
+        bindchange="bindDateChange">
+          {{currentBirthday}}
+        <image src="{{rightOpImg}}" class="info-right-rightOpImg"></image>
+      </picker>
+    </view>
+
+    <view class="info"  id="area" bindtap="updateInfo">
+      <view class="info-left">地区</view>
+      <view class="info-right">{{currentArea}}
+        <image src="{{rightOpImg}}" class="info-right-rightOpImg"></image>
+      </view>
+    </view>
+    <view class="info"  id="email" bindtap="updateInfo">
+      <view class="info-left">邮箱</view>
+      <view class="info-right">{{currentEmail}}
+        <image src="{{rightOpImg}}" class="info-right-rightOpImg"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:else class="updateInfoView">
+  <view class="line"></view>
+  <view class="updateTitle">{{updateTitle}}</view>
+  <view class="update-contenxt">
+    <input value="{{updateDefaultContenxt}}"
+      placeholder="{{placeholderText}}"
+      class="update-input-left"
+      maxlength="20"
+      bindinput="updateInputInfo"
+      id="{{inputId}}">
+    </input>
+    <view class="update-Input-right" bindtap="clearInfo">
+      <image src="{{clearImg}}" class="chaImg"></image>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="updateTitle">
+    {{remianNum}}/{{maxNum}}
+  </view>
+  <button class="saveBtn" bindtap="saveUpdate">保存</button>
+</view>

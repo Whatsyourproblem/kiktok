@@ -1,0 +1,277 @@
+/* pages/myself/myself.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.head{
+  margin-top: 15%;
+  width: 100%;
+  height: 160rpx;
+}
+.left{
+  float: left;
+  width: 20%;
+}
+.left-image{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  margin-top: 5rpx;
+}
+.right{
+  float: left;
+  width: 80%;
+}
+.right-user-Id{
+  margin-top: 20rpx;
+  font-size: 18px;
+  color: black;
+  font-weight:600
+}
+.right-user-introductory-left{
+  float: left;
+  width: 75%;
+  font-size: 13px;
+  font-weight:200
+}
+.banyuan{
+  height: 38rpx;
+  background-color: gainsboro;
+  float: left;
+  width: 15%;
+  border-radius: 50% 0 0 50%;
+}
+.right-user-introductory-right{
+  float: right;
+  width: 25%;
+  font-size: 14px;
+  text-align: left;
+}
+.userInfo{
+  height: 38rpx;
+  background-color: gainsboro;
+  float: right;
+  width: 85%;
+}
+.right-user-hobby{
+  display: inline-flex;
+  font-size: 13px;
+  font-weight:400
+}
+.attentionAndfans{
+  margin-left: 30rpx;
+}
+.firstLine{
+  width: 100%;
+  height: 1rpx;
+  background-color: gainsboro;
+}
+.body{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 340rpx;
+}
+.moreAction{
+  text-align: left;
+  height: 50rpx;
+  margin-left: 3%;
+}
+.grid{
+  width: 100%;
+  height: 290rpx;
+}
+.grid image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.grid-first-line{
+  display: flex;
+  display: -webkit-flex;
+  margin-top: 30rpx;
+}
+.grid-line-view{
+  width: 25%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.secondLine{
+  width: 100%;
+  height: 1rpx;
+  background-color: gainsboro;
+}
+.body-two{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  display: -webkit-flex;
+}
+.body-two-select{
+  width: 50%;
+  text-align: center;
+  height: 50rpx;
+  border-top: 15rpx;
+  font-size: 20px;
+}
+.infoNum{
+  font-size: 14px;
+}
+.thirdLine{
+  height: 4rpx;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  margin-top: 4rpx;
+  background-color: gray;
+}
+.normal{
+  height: 4rpx;
+  width: 50%;  
+  background-color: gray;
+}
+.select{
+  height: 5rpx;
+  width: 50%;
+  background-color: yellowgreen;
+}
+.zuopin{
+  text-align: center;
+  width: 100%;
+  height: 800rpx;
+}
+.video{
+  width: 50%;
+  float: left;
+}
+.likeNum{
+  margin-top: 100%;
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+}
+.likeImg{
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+}
+.likeNum text{
+  height: 40rpx;
+  margin-top: 20rpx;
+  color: white;
+}
+.dynamicView{
+  width: 100%;
+  height: 1200rpx;
+  background-color: gainsboro;
+}
+.dynamicSize{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-bottom: 30rpx;
+  /* border-bottom: 1px solid black; */
+}
+.dynamicHead{
+  width: 100%;
+  height: 150rpx;
+}
+.dynamic-left{
+  float: left;
+  width: 110rpx;
+  height: 110rpx;
+  margin-top: 20rpx;
+}
+.dynamicImg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.dynamic-right{
+  float: left;
+  width: 70%;
+  height: 100rpx;
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+}
+.publishName{
+  font-size: 17px;
+  font-weight: 500;
+}
+.publishTime{
+  font-size: 12px;
+  font-weight: 400;
+}
+.dynamic-right-right{
+  float: right;
+  widows: 7%;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+.moreImg{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.dynamicComment{
+  height: 40rpx;
+  font-size: 17px;
+  margin-left: 10rpx;
+}
+.dynamicComment-type{
+  font-size: 15px;
+  font-weight: 300;
+}
+.dynamicFrom{
+  width: 98%;
+  margin-left: 1%;
+  height: auto;
+  background-color: gainsboro;
+}
+.dynamicFrom-left{
+  margin-left: 10rpx;
+  font-size: 16px;
+  color: rgb(184, 145, 255);
+  font-weight: 600;
+}
+.dynamicFrom-left-context{
+  margin-left: 15rpx;
+  font-size: 14px;
+}
+.hasVideo{
+  margin-top: 10rpx;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.dynamicVideo{
+  width: 100%;
+}
+.dynamic-footer{
+  margin-top: 50rpx;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  display: -webkit-flex;
+}
+.dynamic-footer2{
+  margin-top: 50tpx;
+  width: 100%;
+  height: 30rpx;
+}
+.dynamic-footer-imgSize{
+  width: 33.333333%;
+  height: 80rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.dynamic-footer-imgSize image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.dynamic-num{
+  height: 60rpx;
+  margin-top: 12rpx;
+  font-size: 14px;
+  font-weight: 300;
+}

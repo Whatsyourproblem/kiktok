@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/myself/myself",
+    "pages/paishe/paishe",
+    "pages/search/search",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/upload/upload",
+    "pages/video/video",
+    "pages/updateUserInfo/updateUserInfo",
+    "pages/fansAndAttention/fansAndAttention",
+    "pages/otherUserInfo/otherUserInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationStyle": "custom",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": false,
+    "navigationBarTextStyle": "black",
+    "backgroundColorTop": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/icon/index.png"
+      },
+      {
+        "pagePath": "pages/upload/upload",
+        "text": "上传",
+        "iconPath": "./images/icon/paizhao2.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "./images/icon/mine.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

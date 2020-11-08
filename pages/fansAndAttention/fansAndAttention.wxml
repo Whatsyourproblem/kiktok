@@ -1,0 +1,23 @@
+<!--pages/fansAndAttention/fansAndAttention.wxml-->
+<view class="head">
+  <view class="head-imgView" bindtap="goBack">
+    <image src="{{leftBackImg}}" class="leftBackImg"></image>
+  </view>
+  
+  <view class="head-attention">{{title}}</view>
+</view> 
+
+<scroll-view class="attention-SV" scroll-y>
+  <block wx:for="{{attentionList}}" wx:key="{{index}}">
+    <view class="attention-line" id="{{item.userId}}" bindtap="getAttentionUserInfo"> 
+      <view class="attention-line-left">
+        <image src="{{item.userImg}}" class="userImg"></image>
+      </view>
+      <view class="attention-line-right">
+        <view class="userName">{{item.userName}}</view>
+        <view class="userIntro">{{item.userIntro}}</view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+

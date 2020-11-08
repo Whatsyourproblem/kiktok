@@ -1,0 +1,252 @@
+<!--pages/myself/myself.wxml-->
+<view class="head">
+  <view class="left">  
+    <image class="left-image" src="{{userInfoImg}}"></image>
+  </view>
+  <view class="right">
+    <view class="right-user-Id">
+      用户ID:{{userId}}
+    </view>
+
+    <view class="right-user-introductory">
+      <view class="right-user-introductory-left">
+        {{userInfoIntro}}
+      </view>
+      <view class="right-user-introductory-right">
+        <view class="banyuan"></view>
+        <view class="userInfo" bindtap="updateInfo">编辑资料</view>
+      </view>
+    </view>
+    <view class="right-user-hobby">
+      <view class="praise">
+        {{userInfoStar}} 获赞
+      </view> 
+      <view class="attentionAndfans" bindtap="getAttention">
+        {{userInfoFocus}} 关注
+      </view>
+      <view class="attentionAndfans" bindtap="getFans">
+        {{userInfoFans}} 粉丝
+      </view>
+    </view>
+  </view>
+</view> 
+<view class="firstLine"></view>
+
+<view class="body">
+  <view class="moreAction">
+    更多功能
+  </view>
+  <view class="grid">
+    <view class="grid-first-line">
+      <view class="grid-line-view">
+        <image src="{{walletImg}}" bindtap="walletOp"></image>
+        <view>钱包</view>
+      </view>
+      <view class="grid-line-view"> 
+        <image src="{{shenPingImg}}" bindtap="walletOp"></image>
+        <view>神评</view>
+      </view>
+      <view class="grid-line-view">
+        <image src="{{shangchengImg}}" bindtap="walletOp"></image>
+        <view>商城</view>
+      </view>
+      <view class="grid-line-view">
+        <image src="{{bookImg}}" bindtap="walletOp"></image>
+        <view>小说</view>
+      </view>
+    </view>
+    <!-- 18739533541 -->
+    <view class="grid-first-line">
+      <view class="grid-line-view"> 
+        <image src="{{dingdanImg}}" bindtap="walletOp"></image>
+        <view>订单</view>
+      </view>
+      <view class="grid-line-view">
+        <image src="{{kabaoImg}}" bindtap="walletOp"></image>
+        <view>卡包</view>
+      </view>
+      <view class="grid-line-view">
+        <image src="{{kefuImg}}" bindtap="walletOp"></image>
+        <view>客服</view>
+      </view>
+      <view class="grid-line-view">
+        <image src="{{tuichuImg}}" bindtap="quitOp"></image>
+        <view>退出</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="secondLine"></view>
+
+<view class="body-two">
+  <view class="body-two-select" bindtap="select" id="1">
+    作品
+    <view class="infoNum">
+      {{userInfoPublish}}
+    </view>
+  </view>
+  <!-- <view class="body-two-select" bindtap="select" id="2">
+    动态
+  </view> -->
+  <view class="body-two-select" bindtap="select" id="3">
+    喜欢
+    <view class="infoNum">
+      {{userInfoCollects}}
+    </view>
+  </view>
+</view>
+
+<view class="thirdLine">
+  <view class="{{select == 1 ? 'select':'normal'}}" ></view>
+  <!-- <view class="{{select == 2 ? 'select':'normal'}}" ></view> -->
+  <view class="{{select == 3 ? 'select':'normal'}}" ></view>
+</view>
+
+<!-- 作品页 -->
+<scroll-view wx:if="{{select == 1}}" 
+            class="zuopin"
+            scroll-y>
+  <block wx:for="{{showList}}" wx:key="{{index}}">
+    <view>
+      <video class="video"
+            id="{{item.videoId}}"
+            src="{{item.videoUrl}}"
+            bindtap="selectVideo"
+            controls="{{controls}}"
+            show-fullscreen-btn="{{showFullscreenBtn}}"
+            show-center-play-btn="{{showCenterPlayBtn}}"
+            initial-time="{{initialTime}}"
+            show-play-btn="{{showPlayBtn}}"
+            enable-play-gesture="{{enablePlayGesture}}"
+            enable-progress-gesture="{{enableProgressGesture}}"
+            object-fit="cover"
+            >
+            <view class="likeNum">
+              <image src="{{likeImg}}" class="likeImg"></image> 
+              <text> {{item.recommend}}</text>
+            </view>
+      </video>
+    </view>
+  </block>
+</scroll-view>
+
+<!-- 动态页面 -->
+<!-- <scroll-view wx:if="{{select == 2}}" 
+            class="dynamicView"
+            scroll-y>
+  <block wx:for="{{dynamicList}}" wx:key="{{index}}">
+    <view class="dynamicSize" id="{{item.dynamicId}}">
+      
+      <view class="dynamicHead">
+        <view class="dynamic-left">
+          <image src="{{item.publishImg}}" class="dynamicImg" bindtap="publishUserImg" id="{{item.publishId}}"></image>
+        </view>
+        <view class="dynamic-right">
+          <view class="publishName">{{item.publishName}}</view>
+          <view class="publishTime">{{item.publishTime}}</view>
+        </view>
+        <view class="dynamic-right-right">
+          <image src="{{moreImg}}" class="moreImg" bindtap="moreOp" id="{{index}}"></image>
+        </view>
+        
+      </view>
+      <view>
+        
+        <view wx:if="{{item.type == 0}}">
+        
+          <view class="dynamicComment" wx:if="{{item.pinglunContext}}">
+            <text class="dynamicComment-type">转发:</text>
+            {{item.pinglunContext}}
+          </view>
+        </view>
+        <view wx:elif="{{item.type == 1}}">
+         
+          <view class="dynamicComment" wx:if="{{item.pinglunContext}}">
+            <text class="dynamicComment-type">回复:</text>
+            {{item.pinglunContext}}
+          </view>
+        </view>
+
+        <view class="dynamicFrom" wx:if="{{item.dynamicFromContext || item.videoUrl}}">
+          <view class="dynamicFrom-left" id="{{item.dynamicFromId}}" bindtap="getDynamicUser">
+            {{item.dynamicFromName}}:
+          </view>
+          
+          <view wx:if="{{item.dynamicFromContext}}" class="dynamicFrom-left-context">
+              {{item.dynamicFromContext}}
+          </view>
+
+          <view wx:if="{{item.videoUrl}}" class="hasVideo">
+            <video class="dynamicVideo" 
+                  src="{{item.videoUrl}}"
+                  controls="{{controls}}"
+                  show-fullscreen-btn="{{!showFullscreenBtn}}"
+                  show-center-play-btn="{{!showCenterPlayBtn}}"
+                  initial-time="{{initialTime}}"
+                  show-play-btn="{{showPlayBtn}}"
+                  enable-play-gesture="{{enablePlayGesture}}"
+                  enable-progress-gesture="{{!enableProgressGesture}}">
+            </video>
+          </view>
+        </view>
+
+        
+        <view class="dynamic-footer" wx:if="{{item.type == 0}}">
+         
+          <view class="dynamic-footer-imgSize" wx:if="{{!item.isLike}}">
+            <image src="{{noZanImg}}" bindtap="dianZan" id="{{index}}"></image>
+            <view class="dynamic-num">{{item.recommand}}</view>
+          </view>
+          <view class="dynamic-footer-imgSize" wx:else>
+            <image src="{{zanImg}}" bindtap="dianZan" id="{{index}}"></image>
+            <view class="dynamic-num">{{item.recommand}}</view>
+          </view>
+        
+          <view class="dynamic-footer-imgSize">
+            <image src="{{commentImg}}" bindtap="pinglun" id="{{item.dynamicId}}"></image>
+            <view class="dynamic-num">{{item.commentNum}}</view>
+          </view>
+          
+          <view class="dynamic-footer-imgSize">
+            <image src="{{transforImg}}" bindtap="zhuanfa" id="{{index}}"></image>
+            <view class="dynamic-num">{{item.transforNum}}</view>
+          </view>
+          
+        </view>
+        <view wx:else class="dynamic-footer2">
+        </view>
+
+      </view>
+
+    </view>
+  </block>
+</scroll-view> -->
+
+<!-- 喜欢页面 -->
+<scroll-view wx:if="{{select == 3}}" 
+            class="zuopin"
+            scroll-y>
+  <block wx:for="{{showList}}" wx:key="{{index}}">
+    <view>
+      <video class="video"
+            id="{{item.videoId}}"
+            src="{{item.videoUrl}}"
+            bindtap="selectVideo"
+            controls="{{controls}}"
+            show-fullscreen-btn="{{showFullscreenBtn}}"
+            show-center-play-btn="{{showCenterPlayBtn}}"
+            initial-time="{{initialTime}}"
+            show-play-btn="{{showPlayBtn}}"
+            enable-play-gesture="{{enablePlayGesture}}"
+            enable-progress-gesture="{{enableProgressGesture}}"
+            object-fit="cover"
+            >
+            <view class="likeNum">
+              <image src="{{likeImg}}" class="likeImg"></image> 
+              <text> {{item.recommend}}</text>
+            </view>
+      </video>
+    </view>
+  </block>
+</scroll-view>

@@ -1,0 +1,135 @@
+/* pages/upload/upload.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: gainsboro;
+}
+.upload{
+  border-radius: 15rpx;
+  width: 100%;
+  height: 140rpx;
+  margin-top: 80rpx;
+  background-color: white;
+}
+.uptext{
+  float: left;
+  width: 50%;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+  font-size: 18px;
+}
+.uploadImg{
+  float: right;
+  margin-right: 5%;
+  margin-top: 20rpx;
+  height: 100rpx;
+  width: 100rpx;
+}
+.upVD{
+  float: right;
+  /* width: 45%; */
+  height: 140rpx;
+  margin-right: 10%;
+}
+.videoImg{
+  height: 100%;
+  width: 140rpx;
+}
+.vidChaImg{
+  height: 40rpx;
+  width: 40rpx;
+  margin-bottom: 90rpx;
+}
+
+.info{
+  border-radius: 15rpx;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 40rpx;
+  background-color: white;
+}
+.left{
+  float: left;
+  width: 15%;
+}
+.titleImg{
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.right{
+  float: right;
+  width: 85%;
+}
+.left2{
+  float: left;
+  width: 80%;
+}
+.right2{
+  float: right;
+  width: 20%;
+}
+.right input{
+  font-size: 20px;
+  height: 80rpx;
+  margin-top: 10rpx;
+}
+.downImg{
+  height: 60rpx;
+  width: 60rpx;
+  margin-top: 20rpx;
+  margin-right: 40rpx;
+}
+.tags{
+  width: 100%;
+  height: 200rpx;
+  /* background-color: greenyellow; */
+}
+.swiper{
+  float: right;
+  width: 20%;
+  margin-right: 20rpx;
+  height: 300rpx;
+  background-color: gainsboro;
+}
+.swiper view{
+  width: 100%;
+  height: 28px;
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 18px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.item{
+  width: 130rpx;
+  height: 50rpx;
+  background-color: blanchedalmond;
+  margin-top: 25rpx;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 30rpx;
+  border-radius: 13rpx;
+}
+.b_cha{
+  height:40rpx;
+  width: 40rpx;
+  float: right;
+  margin-top: 5rpx;
+}
+.buttonGroup{
+  margin-top: 150rpx;
+}
+.upStart{
+  border-radius: 7%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.upQx{
+  margin-top: 30rpx;
+  border-radius: 7%;
+  margin-left: 15%;
+  margin-right: 15%;
+}

@@ -1,0 +1,68 @@
+<!--pages/register/register.wxml-->
+<view class="registerPage">
+  <view class="row">
+    <view class="left">
+      <image src="{{pnoneImg}}" class="img"></image>
+      <input placeholder="请输入您的手机号" 
+             class="phoneInput2" 
+             bindinput="phoneInput" 
+             value="{{phone}}"
+             type="number"></input>
+    </view>
+    <view class="right"> 
+      <button bindtap="getYz_Code" disabled="{{getCodeStyle}}">{{setCodeTime}}</button>
+    </view>
+    <!-- <view class="right" wx:else> 
+      <button bindtap="getYz_Code" disabled="{{ifgetCode}}">{{}}秒后重发</button>
+    </view> -->
+
+  </view>
+
+  <view class="pwd">
+    <view class="left2">
+      <image src="{{yz_codeImg}}" class="img"></image>
+      <input placeholder="请输入验证码" 
+             class="phoneInput" 
+             bindinput="yz_codeInput" 
+             value="{{yz_code}}"
+             type="number"></input>
+    </view>
+    <view class="right2">
+      <image src="{{chaImg}}" class="img" bindtap="clearYzCode"></image>
+    </view>
+  </view>
+
+  <view class="pwd">
+    <view class="left2">
+      <image src="{{pwdImg}}" class="img"></image>
+      <input placeholder="请输入您的密码" 
+             class="phoneInput" 
+             bindinput="pwdInput1" 
+             value="{{pwd1}}"
+             password="true"></input>
+    </view>
+    <view class="right2">
+      <image src="{{chaImg}}" class="img" bindtap="clearMiMa1"></image>
+    </view>
+  </view>
+
+  <view class="pwd">
+    <view class="left2">
+      <image src="{{pwdImg}}" class="img"></image>
+      <input placeholder="请再次输入您的密码" 
+             class="phoneInput" 
+             bindinput="pwdInput2" 
+             value="{{pwd2}}" 
+             password="true"></input>
+    </view>
+    <view class="right2">
+      <image src="{{chaImg}}" class="img" bindtap="clearMiMa2"></image>
+    </view>
+  </view>
+  
+  <view class="button_group">
+    <button class="registerBtn" bindtap="register">注册</button>
+    <button class="leaveBtn" bindtap="leave">取消</button>
+  </view>
+
+</view>

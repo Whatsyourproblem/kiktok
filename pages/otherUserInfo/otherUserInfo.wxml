@@ -1,0 +1,112 @@
+<!--pages/myself/myself.wxml-->
+<view class="head">
+  <view class="left">  
+    <image class="left-image" src="{{userInfoImg}}"></image>
+  </view>
+  <view class="right">
+    <view class="right-user-Id">
+      用户ID:{{userId}} 
+    </view>
+
+    <view class="right-user-introductory">
+      <view class="right-user-introductory-left">
+        {{userInfoIntro}}
+      </view>
+      <view class="right-user-introductory-right">
+        <view class="banyuan"></view>
+        <view class="userInfo" bindtap="goBack">返回</view>
+      </view>
+    </view>
+    <view class="right-user-hobby">
+      <view class="praise">
+        {{userInfoStar}} 获赞
+      </view> 
+      <view class="attentionAndfans" bindtap="getAttention">
+        {{userInfoFocus}} 关注
+      </view>
+      <view class="attentionAndfans" bindtap="getFans">
+        {{userInfoFans}} 粉丝
+      </view>
+    </view>
+  </view>
+</view> 
+<view class="firstLine"></view>
+
+
+<view class="secondLine"></view>
+
+<view class="body-two">
+  <view class="body-two-select" bindtap="select" id="1">
+    作品
+    <view class="infoNum">
+      {{userInfoPublish}}
+    </view>
+  </view>
+  <view class="body-two-select" bindtap="select" id="3">
+    喜欢
+    <view class="infoNum">
+      {{userInfoCollects}}
+    </view>
+  </view>
+</view>
+
+<view class="thirdLine">
+  <view class="{{select == 1 ? 'select':'normal'}}" ></view>
+  <view class="{{select == 3 ? 'select':'normal'}}" ></view>
+</view>
+
+<!-- 作品页 -->
+<scroll-view wx:if="{{select == 1}}" 
+            class="zuopin"
+            scroll-y>
+  <block wx:for="{{showList}}" wx:key="{{index}}">
+    <view>
+      <video class="video"
+            id="{{item.videoId}}"
+            src="{{item.videoUrl}}"
+            bindtap="selectVideo"
+            controls="{{controls}}"
+            show-fullscreen-btn="{{showFullscreenBtn}}"
+            show-center-play-btn="{{showCenterPlayBtn}}"
+            initial-time="{{initialTime}}"
+            show-play-btn="{{showPlayBtn}}"
+            enable-play-gesture="{{enablePlayGesture}}"
+            enable-progress-gesture="{{enableProgressGesture}}"
+            object-fit="cover"
+            >
+            <view class="likeNum">
+              <image src="{{likeImg}}" class="likeImg"></image> 
+              <text> {{item.recommend}}</text>
+            </view>
+      </video>
+    </view>
+  </block>
+</scroll-view>
+
+<!-- 喜欢页面 -->
+<scroll-view wx:if="{{select == 3}}" 
+            class="zuopin"
+            scroll-y>
+  <block wx:for="{{showList}}" wx:key="{{index}}">
+    <view>
+      <video class="video"
+            id="{{item.videoId}}"
+            src="{{item.videoUrl}}"
+            bindtap="selectVideo"
+            controls="{{controls}}"
+            show-fullscreen-btn="{{showFullscreenBtn}}"
+            show-center-play-btn="{{showCenterPlayBtn}}"
+            initial-time="{{initialTime}}"
+            show-play-btn="{{showPlayBtn}}"
+            enable-play-gesture="{{enablePlayGesture}}"
+            enable-progress-gesture="{{enableProgressGesture}}"
+            object-fit="cover"
+            >
+            <view class="likeNum">
+              <image src="{{likeImg}}" class="likeImg"></image> 
+              <text> {{item.recommend}}</text>
+            </view>
+      </video>
+    </view>
+  </block>
+</scroll-view>

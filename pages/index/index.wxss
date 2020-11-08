@@ -1,0 +1,189 @@
+page{
+  height: 100%;
+  background: black;
+}
+.swiper{
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+.swiper video{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  position:fixed;
+  top:0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row; 
+}
+.search{
+  width:45rpx;
+  height:45rpx;
+  margin-right: 60rpx;
+}
+.paizhao{
+  width:45rpx;
+  height:45rpx;
+  margin-left: 60rpx;
+}
+.leftInfo{
+  position: fixed;
+  width: 580rpx;
+  height: 120rpx;
+  margin-top: 140%;
+  color: white;
+  margin-left: 3%;
+}
+.publishName{
+  margin-top: 20rpx;
+  width: 200rpx;
+  height: 40rpx;
+}
+.publishTitle{
+  margin-top: 20rpx;
+  width: 550rpx;
+  height: 80rpx;
+}
+.rightOP{
+  position:fixed;
+  margin-left: 85%;
+  width: 80rpx;
+  margin-top: 90%;
+}
+.hidden{
+  position: relative;
+  width: 100%;
+  /* height: 300px; */
+  /* background-color: red; */
+  height: 600rpx;
+  margin-top: -160%;
+}
+.comments{
+  position: relative;
+  height: 600rpx;
+  width: 100%;
+  background-color: white;
+}
+.myhead{
+  width: 80rpx;
+  height: 100rpx;
+}
+.headImg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.addfansiImg{
+  margin-left: 20rpx;
+  margin-top: -20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.like-size{
+  width: 100%;
+}
+.size-me{
+  margin-top: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.recommendNum{
+  margin-top: 10rpx;
+  color: white;
+  text-align: center;
+  width: 80rpx;
+  background-color: green;
+}
+.talk-header{
+  width: 100%;
+  height: 57rpx;
+  background-color: white;
+  border-bottom: 1px solid gainsboro;
+  text-align: center;
+}
+.head{
+  display: inline;
+  font-size: 18px;
+}
+.b_chaImg{
+  position: fixed;
+  float: right;
+  margin-left: 32%;
+  margin-top: 11rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+.talk-footer{
+  width: 100%;
+  height: 80rpx;
+  background-color: white;
+  border-top: 1px solid gainsboro;
+}
+.talk-input{
+  height: 100%;
+  width: 80%;
+  float: left;
+}
+.sendImg{
+  height: 60rpx;
+  width: 60rpx;
+  margin-top: 10rpx;
+  margin-right: 30rpx;
+  float: right
+}
+.scroolView-commentText{
+  height: 460rpx;
+}
+.comment-szie{
+  display: inline-block;
+  height: 120rpx;
+}
+.comment-UserImg{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+  border-radius: 50%;
+}
+.userCommentText{
+  float: right;
+  height: 120rpx;
+  margin-left: 20rpx;
+  width: 680rpx;
+}
+.comment-name{
+  font-size: 13px;
+  color: gray;
+}
+.comment-text{
+  font-size: 15px;
+  color: black;
+}
+.comment-Time{
+  font-size: 12px;
+  color: gray;
+}
+.comment-left{
+  text-align: left;
+  float: left;
+  width: 80%;
+}
+.comment-right{
+  height: 50rpx;
+  margin-top: 5rpx;
+  margin-right: -82rpx;
+  float: right;
+  width: 20%;
+}
+.comment-loveImg{
+  width: 40rpx;
+  height: 40rpx;
+}
+.comment-loveNum{
+  font-size: 11px;
+  width: 40rpx;
+  margin-right: -20rpx;
+  text-align: center;
+}

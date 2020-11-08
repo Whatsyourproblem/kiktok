@@ -1,0 +1,93 @@
+/* pages/login/login.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: gainsboro;
+}
+.loginPage{
+  height: 100%;
+  width: 100%;
+}
+.head{
+  width: 100%;
+  margin-top: 110rpx;
+  text-align: center;
+}
+.head image{
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 50%;
+}
+.inputCount{ 
+  margin-top: 100rpx;
+  background-color: #fff; 
+  width: 100%;
+  border: 1px solid gray;
+  height: 100rpx;
+ 
+} 
+.left{
+  float: left;
+  margin-right: 0;
+  width: 23%;
+}
+.right{
+  float: right;
+  width: 77%;
+}
+.nameImg{ 
+ margin-left: 10rpx;
+ margin-top: 20rpx;
+ width: 60rpx; 
+ height: 60rpx;
+ float: left;
+} 
+.nameImg2{ 
+ margin-left: 10rpx;
+ margin-top: 20rpx;
+ width: 55rpx; 
+ height: 55rpx;
+ float: left;
+} 
+.countLab{ 
+ color: black; 
+ font-size: 40rpx;
+ margin-top: 24rpx;
+ float: right;
+} 
+.inputCountText{ 
+ /* float: right; */
+ height: 100rpx;
+ margin-top: 3rpx;
+ text-align: left; 
+ color: black; 
+ font-size: 18px;
+}
+.inputPwd{
+  background-color: #fff; 
+  width: 100%;
+  border: 1px solid gray;
+  border-top: none;
+  height: 100rpx;
+  margin-top: 0;
+}
+.buttonOp{
+  width: 100%;
+  margin-top: 100rpx;
+}
+.Btn{
+  width: 100%;
+  background-color: whitesmoke;
+}
+.Btn2{
+  width: 100%;
+  margin-top: 30rpx;
+  background-color: whitesmoke;
+}
+.Btn3{
+  width: 100%;
+  margin-top: 30rpx;
+  background-color: whitesmoke;
+}
+
+

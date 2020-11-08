@@ -1,0 +1,102 @@
+<view class="search">
+  <view class="top">
+    <image src="/images/icon/w_back.png" bindtap="w_back" class="back"></image>
+    <image src="/images/icon/white_search.png" class="zhao" bindtap="search"></image>
+    <input type="text" class="search_input" value="{{searchValue}}" bindinput="searchInput"></input>
+    <image src="/images/icon/cha.png" class="quxiao" bindtap="clearInput"></image>
+    <text bindtap="search" class="search_text" wx:if="{{!showHistory}}">搜索</text>
+    <text bindtap="noSearch" class="search_text" wx:else>取消</text>
+  </view>
+
+  <block wx:if="{{!searchVideo}}">
+    <!-- 搜索历史 ，有搜索历史就展示-->
+    <block wx:if="{{hasHistory}}">
+      <scroll-view class="{{!showHistory ? 'search_histort_SV':'search_histort_SV2'}}" scroll-y>
+        <view class="history" wx:if="{{hasHistory}}">
+          <block wx:for="{{historyList}}" wx:key="{{id}}" wx:if="{{index < 2 && !showHistory}}">        
+            <view >
+              <image src="/images/icon/time.png" class="timeIcon"></image>
+              <text class="his_title" bindtap="selectHistoryValue" id="{{item.title}}">{{item.title}}</text>
+              <image src="/images/icon/cha.png" class="deleteHistory" bindtap="deleteHistory" id="{{index}}"></image>
+            </view>
+          </block>
+          <block wx:for="{{historyList}}" wx:key="{{id}}" wx:if="{{showHistory}}">
+            <view >
+              <image src="/images/icon/time.png" class="timeIcon"></image>
+              <text class="his_title" bindtap="selectHistoryValue" id="{{item.title}}">{{item.title}}</text>
+              <image src="/images/icon/cha.png" class="deleteHistory" bindtap="deleteHistory" id="{{index}}"></image>
+            </view>
+          </block>
+
+        </view>
+      </scroll-view>
+      <!-- 全部搜索 -->
+      <view class="allSearch">
+        <text bindtap="{{!showHistory ? 'getAll':'clearAll'}}">
+          {{showText}}
+        </text>
+      </view>
+    </block>
+
+    <view class="fengexian" wx:if="{{hasHistory}}"></view>
+
+    <view class="hotVideoSelect">
+      <view class="hotVideo_Select" id='1' bindtap="select">热点榜</view>
+      <view class="hotVideo_Select" id='2' bindtap="select">猜你想搜</view>
+    </view>
+
+    <view class="hotVideo_Line">
+      <view class="{{select == 1 ? 'select':'normal'}}"></view>
+      <view class="{{select == 2 ? 'select':'normal'}}"></view>
+    </view>
+
+    <view class="list_size">
+      <block wx:for="{{select == 1 ? hotList : guestList}}" wx:key="{{index}}">
+        <view class="showHot" id="{{item.videoId}}" bindtap="selectVideo">
+          <text>{{index+1}}.{{item.title}}</text>
+          <image src="/images/icon/hot.png"></image>
+          <text class="hotCount">{{item.recommend}}</text>
+        </view>
+      </block>
+    </view>
+
+    <!-- <view class="list_size" wx:if="{{select == 1}}">
+      <block wx:for="{{hotList}}" wx:key="{{index}}">
+        <view class="showHot" id="{{item.videoId}}" bindtap="getVideoInfo">
+          <text>{{index+1}}.{{item.title}}</text>
+          <image src="/images/icon/hot.png"></image>
+          <text class="hotCount">{{item.recommend}}</text>
+        </view>
+      </block>
+    </view> -->
+
+    <!-- <view class="list_size" wx:if="{{select == 2}}">
+      <block wx:for="{{guestList}}" wx:key="{{index}}">
+        <view class="showHot" id="{{item.videoId}}" bindtap="getVideoInfo">
+          <text>{{index+1}}.{{item.title}}</text>
+          <image src="/images/icon/hot.png"></image>
+          <text class="hotCount">{{item.recommend}}</text>
+        </view>
+      </block>
+    </view> -->
+
+  </block>
+</view>
+
+<scroll-view wx:if="{{searchVideo}}" class="searchVideoView" scroll-y>
+  <block wx:for="{{videoList}}" wx:key="{{index}}">
+    <video class="video" 
+          id="{{item.videoId}}"
+          src="{{item.videoUrl}}" 
+          bindtap="selectVideo" 
+          controls="{{controls}}"
+          show-fullscreen-btn="{{showFullscreenBtn}}" 
+          show-center-play-btn="{{showCenterPlayBtn}}" 
+          initial-time="{{initialTime}}" 
+          show-play-btn="{{showPlayBtn}}"
+          enable-play-gesture="{{enablePlayGesture}}" 
+          enable-progress-gesture="{{enableProgressGesture}}" 
+          object-fit="cover">
+    </video>
+  </block>
+</scroll-view>

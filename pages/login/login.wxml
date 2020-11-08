@@ -1,0 +1,33 @@
+<!--pages/login/login.wxml-->
+<view class="loginPage">
+  <view class="head">
+    <image src="{{userInfo.avatarUrl}}" wx:if="{{userInfo.avatarUrl}}"></image>
+    <image src="{{imgUrl}}" wx:else></image>
+  </view>
+  
+  <!-- 账号 -->
+  <view class="inputCount">
+    <view class="left">
+      <image src="{{imgCount}}" class="nameImg"></image>
+      <label class="countLab">账号:</label>
+    </view>
+    <view class="right">
+      <input placeholder="请输入账号" class="inputCountText" bindinput="getId"></input>
+    </view>
+  </view>
+  <view class="inputPwd">
+    <view class="left">
+      <image src="{{imgPas}}" class="nameImg2"></image>
+      <label class="countLab">密码:</label>
+    </view>
+    <view class="right">
+      <input password="true" placeholder="请输入密码" class="inputCountText" bindinput="getPwd"></input>
+    </view>
+  </view>
+
+  <view class="buttonOp">
+    <button class="Btn" bindtap="login">登陆</button>
+    <button class="Btn2" bindtap="register">注册</button>
+    <button class="Btn3" bindtap="quxiao">取消</button>
+  </view>
+</view>

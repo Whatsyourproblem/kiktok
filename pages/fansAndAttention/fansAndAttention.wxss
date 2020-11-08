@@ -1,0 +1,67 @@
+/* pages/fansAndAttention/fansAndAttention.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: gainsboro;
+}
+.head{
+  width: 100%;
+  height: 70rpx;
+  margin-top: 60rpx;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.head-imgView{
+  float: left;
+  height: 40rpx;
+  margin-top: 15rpx;
+  margin-left: 10rpx;
+  text-align: center;
+  width: 10%;
+}
+.leftBackImg{
+  width: 30rpx;
+  height: 40rpx;
+}
+.head-attention{
+  width: 80%;
+  text-align: center;
+}
+/* 关注列表 */
+.attention-SV{
+  height: 90%;
+  width: 100%;
+}
+.attention-line{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+}
+.attention-line-left{
+  float: left;
+  width: 13%;
+}
+.userImg{
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+}
+.attention-line-right{
+  width: 80%;
+  text-align: left;
+  height: 100rpx;
+  margin-top: 13rpx;
+  margin-left: 15rpx;
+}
+.userName{
+  font-size: 16px;
+  font-weight: 800;
+}
+.userIntro{
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+}

@@ -1,0 +1,139 @@
+/* pages/updateUserInfo/updateUserInfo.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #161824;
+}
+.head{
+  width: 100%;
+  height: 70rpx;
+  margin-top: 60rpx;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  border-bottom: 1px solid #161824;
+  color: #ADAEB2;
+}
+.head-imgView{
+  float: left;
+  height: 40rpx;
+  margin-top: 15rpx;
+  margin-left: 10rpx;
+  text-align: center;
+  width: 10%;
+}
+.leftBackImg{
+  width: 30rpx;
+  height: 40rpx;
+}
+.head-attention{
+  width: 80%;
+  text-align: center;
+}
+
+/* 资料体 */
+.userImg-view{
+  width: 100%;
+  height: 230rpx;
+  text-align: center;
+}
+.userImg{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+}
+.addImg-view{
+  margin-top: -120rpx;
+}
+.addImg{
+  width: 80rpx;
+  height: 80rpx;
+}
+.changeImgInfo{
+  margin-top: 40rpx;
+  color: white;
+  font-weight: 600;
+}
+.updateInfoBody{
+  width: 100%;
+  height: 600rpx;
+  margin-top: 88rpx;
+}
+.info{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  display: -webkit-flex;
+}
+.info-left{
+  float: left;
+  height: 60rpx;
+  width: 20%;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-top: 10rpx;
+  margin-left: 5%;
+}
+.info-right{
+  float: right;
+  width: 70%;
+  height: 60rpx;
+  margin-top: 13rpx;
+  text-align: right;
+  color: gainsboro;
+  font-size: 16px;
+}
+.info-right-rightOpImg{
+  margin-left: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.updateInfoView{
+  height: 600rpx;
+  width: 100%;
+  margin-top: 88rpx;
+}
+.updateTitle{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 40rpx;
+  color: #8B8C91;
+  font-size: 16px;
+}
+.update-contenxt{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 100rpx;
+  color: #FFFFFF;
+  display: flex;
+}
+.update-input-left{
+  width: 80%;
+  height: 100rpx;
+  caret-color: yellow;
+}
+.update-Input-right{
+  height: 100rpx;
+}
+.chaImg{
+  float: right;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 30rpx;
+  margin-left: 80rpx;
+}
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: #252732;
+}
+.saveBtn{
+  width: 130rpx;
+  height: 60rpx;
+  font-size: 18px;
+  line-height: 60rpx;
+  text-align: center;
+  color: white;
+  background-color: #612035;
+}

@@ -1,0 +1,165 @@
+/* pages/search/search.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  /* margin-left: 30rpx;
+  margin-right: 30rpx; */
+  background-color: black;
+}
+.serach{
+  height: 100%;
+  width: 100%;
+}
+.top{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 20%;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  display: flex;
+}
+.back{
+  width: 54rpx;
+  height: 54rpx;
+  margin-top: 10rpx;
+}
+.zhao{
+  width: 70rpx;
+  height: 70rpx;
+  background-color: gray; 
+  margin-left: 3%;
+  border-top-left-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+}
+.search_input{
+  display: inline-block;
+  width: 400rpx;
+  height: 70rpx;
+  margin-left: 0;
+  background-color: gray;
+  color: gainsboro;
+}
+.quxiao{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 0;
+  background-color: gray;
+  border-top-right-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+.search_text{
+  /* position: fixed; */
+  width: 74rpx;
+  height: 74rpx;
+  font-size: 17px;
+  color: red;
+  margin-left: 30rpx;
+  margin-top: 14rpx;
+}
+.search_histort_SV{
+  width: 100%;
+  height: 120rpx;
+}
+.search_histort_SV2{
+  width: 100%;
+  height: 400rpx;
+  
+}
+.history{
+  margin-top: 30rpx;
+  height: auto;
+  width: 100%;
+  color: gainsboro;
+}
+.timeIcon{
+  height: 30rpx;
+  width: 30rpx;
+}
+.his_title{
+  font-size: 35rpx;
+  margin-left: 15rpx;
+}
+.deleteHistory{
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+}
+.allSearch{
+  width: 100%;
+  height: 20rpx;
+  margin-top: 20rpx;
+  text-align: center
+}
+.allSearch text{
+  font-size: 16px;
+  color: white;
+}
+.fengexian{
+  width: 100%;
+  height: 3px;
+  /* margin-top: 8%; */
+  margin-top: 100rpx;
+  border-bottom: 1px solid gray;
+}
+.hotVideoSelect{
+  margin-top: 20rpx;
+  font-size:17px;
+  width: 100%;
+  height: 50rpx;
+  color: white;
+  display: flex;
+  text-align: center;
+}
+.hotVideo_Select{
+  width: 50%;
+}
+.hotVideo_Line{
+  height: 4rpx;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  margin-top: 4rpx;
+  background-color: gray;
+}
+.normal{
+  height: 4rpx;
+  width: 50%;  
+}
+.select{
+  height: 5rpx;
+  width: 50%;
+  background-color: yellowgreen;
+}
+
+.list_size{
+  color: white;
+  width: 100%;
+  margin-top: 50rpx;
+}
+.showHot{
+  margin-top: 10rpx;
+  font-size: 35rpx;
+  margin-left: 40rpx;
+}
+.showHot image{
+  height: 40rpx;
+  width: 40rpx;
+  float: right;
+}
+.hotCount{
+  font-size: 28rpx;
+  float: right;
+}
+.searchVideoView{
+  margin-top: 100rpx;
+  /* text-align: center; */
+  width: 100%;
+  height: 1000rpx;
+  text-align: center;
+}
+.video{
+  width: 70%;
+
+  background-color: pink;
+  margin-bottom: 10rpx;
+}

@@ -1,0 +1,71 @@
+<!--pages/upload/upload.wxml-->
+
+<view class="upload" wx:if="{{!videoUrl}}">
+    <view class="uptext">选择上传视频/图片</view>
+    <image src="{{uploadImg}}" class="uploadImg" bindtap="upVideo"></image>
+</view>
+
+<view class="upload" wx:if="{{videoUrl}}">
+    <view class="uptext">已选择</view>
+    <view class="upVD">
+      <video src="{{videoUrl}}" class="videoImg"></video>
+      <image src="{{chaImg}}" class="vidChaImg" bindtap="deleteUpVideo"></image>
+    </view>
+</view>
+
+<view class="info">
+    <view class="left">
+      <image src="{{titleImg}}" class="titleImg"></image>
+    </view>
+    <view class="right">
+      <input placeholder="请输入视频标题" bindinput="getInput" value="{{titleValue}}"></input>
+    </view>
+</view>
+
+<view class="info">
+    <view class="left">
+      <image src="{{tagsImg}}" class="titleImg"></image>
+    </view>
+
+    <view class="right">
+      <view class="left2" wx:if="{{!isShowSelect}}">
+        <input placeholder="请选择视频类型" value="{{tagText}}" disabled="none"></input>
+      </view>
+
+      <view class="left2" wx:if="{{isShowSelect}}">
+        <view class="item" wx:for="{{selectTagList}}" wx:key="{{id}}">
+          <text>{{item.title}}</text>
+          <image src="{{chaImg}}" class="b_cha" id="{{index}}" bindtap="deleteTag"></image>
+        </view>
+      </view>
+
+      <view class="right2">
+        <image src="{{downImg}}" class="downImg" bindtap="showTag"></image>
+      </view>
+    </view>
+</view>
+
+<view class="tags" wx:if="{{showTag}}">
+  <swiper class="swiper"
+        next-margin="6rpx"
+        previous-margin="6rpx"
+        circular
+        vertical
+        display-multiple-items="4"
+        >
+    <swiper-item 
+                wx:for="{{tagList}}" 
+                wx:key="id" 
+                class="tag"
+                item-id="{{index}}">
+      <view id="{{index}}" bindtap="addTag">
+        #{{item.title}}
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="buttonGroup">
+  <button class="upStart" bindtap="upStart">开始上传</button>
+  <button class="upQx" bindtap="quxiao">取消</button>
+</view>

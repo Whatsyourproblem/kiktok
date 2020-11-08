@@ -1,0 +1,79 @@
+/* pages/register/register.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: gainsboro;
+}
+.registerPage{
+  height: 100%;
+  width: 100%;
+}
+.row{
+  margin-top: 50rpx;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff; 
+  border-radius: 15rpx;
+}
+.pwd{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff; 
+  border-radius: 15rpx;
+}
+.img{
+  float: left;
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: 0;
+  margin-top: 20rpx;
+}
+.phoneInput2{
+  float: right;
+  width: 86%;
+  margin-left: 13rpx;
+  text-align: left;
+  font-size: 15px;
+  margin-top: 29rpx;
+}
+.phoneInput{
+  float: right;
+  width: 88%;
+  margin-left: 0;
+  text-align: left;
+  font-size: 15px;
+  margin-top: 29rpx;
+}
+.left{
+  float: left;
+  width: 70%;
+}
+.right{
+  float: right;
+  width: 30%;
+}
+.right button{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  background-color: #D2A98B;
+  margin-right: 20rpx;
+}
+.left2{
+  float: left;
+  width: 85%;
+}
+.right2{
+  float: right;
+  width: 15%;
+}
+.button_group{
+  margin-top: 200rpx;
+}
+.registerBtn{
+  border-radius: 15rpx;
+}
+.leaveBtn{
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+}

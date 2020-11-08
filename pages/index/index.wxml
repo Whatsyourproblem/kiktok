@@ -1,0 +1,122 @@
+<!--index.wxml-->
+<view style="width:100%;height:100%;">
+  <swiper vertical="true" next-margin="0px" class="swiper" bindchange="move">
+    <block wx:for="{{videoList}}" wx:key="{{index}}" id="{{item.videoId}}">
+      <swiper-item>
+        <video wx:if="{{index == changeIndex}}" 
+                src="{{item.videoUrl}}"
+                title="{{item.title}}"
+                controls="{{false}}"
+                autoplay="{{autoplay}}"
+                loop="{{loop}}"
+                enable-progress-gesture="{{enableProgressGesture}}"
+                show-center-play-btn="{{showCenterPlayBtn}}"
+                object-fit="cover"
+                enable-play-gesture="{{enablePlayGesture}}"
+                initial-time="{{initialTime}}">
+
+          <view class="container">
+            <!-- <image src='/images/icon/camera.png' class="paizhao" bindtap="paizhao"></image> -->
+            <image class="paizhao" bindtap="paizhao"></image>
+            <image src='/images/icon/search.png' class="search" bindtap="search"></image>
+          </view>
+
+          <!-- 视频发布者与视频标题内容 -->
+          <view class="leftInfo">
+            <view class="publishName">
+              <textarea value="@{{item.publisName}}" disabled></textarea>
+            </view>
+            <scroll-view scroll-y refresher-threshold='0' class="publishTitle">
+              <textarea value="{{item.title}}" disabled disable-default-padding></textarea>
+            </scroll-view>
+          </view>
+          <view class="rightOP">
+            <!-- 自己的微信头像 -->
+            <view class="myhead">
+              <image src="{{item.publishImg}}" class="headImg" id="{{item.publishId}}" bindtap="lookUserInfo"></image>
+              <!-- <image src="{{addfansiImg}}" class="addfansiImg" bindtap="addfansi" wx:if="{{!isFansi}}" id="{{item.publishId}}"></image> -->
+              <image src="{{addfansiImg}}" class="addfansiImg" bindtap="addfansi" wx:if="{{fansiIndex < 0}}" id="{{item.publishId}}"></image>
+            </view>
+
+            <!-- 喜欢收藏 -->
+            <view wx:if="{{item.isLike}}" class="like-size">
+              <!-- 喜欢 -->
+              <image src="{{likeImg}}" class="size-me" bindtap="unlike" id="{{index}}"></image>
+              <view class="recommendNum">{{item.recommend}}</view>
+            </view>
+            <view wx:else class="like-size">
+              <!-- 不喜欢 -->
+              <image src="{{unlikeImg}}" class="size-me" bindtap="like" id="{{index}}"></image>
+              <view class="recommendNum">{{item.recommend}}</view>
+            </view>
+
+            <!-- 评论 -->
+            <view>
+              <image class="size-me" src="{{commentsImg}}" bindtap="toComment"></image>
+              <view class="recommendNum">{{item.commentNum}}</view>
+            </view>
+
+            <view>
+              <!-- 转发分享 -->
+              <!-- <image class="size-me" src="{{shareImg}}" bindtap="reload" id="{{item.publishId}}"></image> -->
+              <button open-type="share" id="btnId" style="display:hidden"></button>
+              <label for="btnId">
+                <image class="size-me" src="{{shareImg}}" id="{{item.publishId}}"></image>
+              </label>
+              
+              <view class="recommendNum">{{item.transmission}}</view>
+            </view>
+          </view>
+        </video>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view wx:if="{{isComment}}">
+    <!-- 隐藏区域防止滑动 -->
+    <view class="hidden">
+
+    </view>
+
+    <scroll-view class="comments">
+      <!-- 评论头 -->
+      <view class="talk-header">
+        <view class="head">{{comment_num}} 条评论</view>
+        <image src="{{b_chaImg}}" class="b_chaImg" bindtap="quxiaoCom"></image>
+      </view>
+      <!-- 评论体 -->
+      <block>
+        <scroll-view scroll-y class="scroolView-commentText">
+          <view wx:for="{{commentsList}}" wx:key="{{id}}">
+            <view class="comment-szie">
+
+              <image src="{{item.commentUserImg}}" class="comment-UserImg"></image>
+              <view class="userCommentText">
+
+                <view class="comment-left">
+                  <view class="comment-name">{{item.commentUserName}}</view>
+                  <view class="comment-text">{{item.commentContent}}</view>
+                  <view class="comment-Time">{{item.commentTime}}</view>
+                </view>
+
+                <view class="comment-right">
+                  <image class="comment-loveImg" src="{{likeImg}}" bindtap="toLike" id="{{index}}" wx:if="{{item.commentIsLike}}"></image>
+                  <image class="comment-loveImg" src="{{unlikeImg2}}" bindtap="toLike" id="{{index}}" wx:else></image>
+                  <view class="comment-loveNum">{{item.commentRecommend}}</view>
+                </view>
+
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </block>
+
+      <!-- 评论脚 -->
+      <view class="talk-footer">
+        <input class="talk-input" type="text" placeholder="有爱评论，说点儿好听的~" bindinput="sayCommentInput" value="{{commentInput}}"></input>
+        <image src="{{sendImg}}" class="sendImg" bindtap="sendComment"></image>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>
