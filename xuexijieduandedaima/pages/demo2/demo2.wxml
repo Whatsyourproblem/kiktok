@@ -1,0 +1,35 @@
+<view wx:if="{{false}}">微微微微信小程序</view>
+<view wx:else>微信小程序</view>
+<text decode>&nbsp;</text>
+
+<view bindtap="navBack">返回上一个页面</view>
+
+
+
+<view wx:if="{{day==1}}">周一</view>
+<view wx:elif="{{day==2}}">周二</view>
+<view wx:elif="{{day==3}}">周三</view>
+<view wx:elif="{{day==4}}">周四</view>
+<view wx:elif="{{day==5}}">周五</view>
+<view wx:elif="{{day==6}}">周六</view>
+<view wx:elif="{{day==7}}">周天</view>
+<view wx:else>错误</view>
+
+<block wx:if="{{false}}">
+<navigator url="/pages/demo/demo">跳转1</navigator>
+<view>这是标题</view>
+<view>这是内容</view>
+</block>
+
+<block wx:else>
+<navigator url="/pages/demo2/demo2">跳转2</navigator>
+</block>
+
+<text decode>&nbsp;</text>
+<view wx:if="{{false}}">微微微微信小程序</view>
+<view wx:else>微信小程序</view>
+
+
+
+
+

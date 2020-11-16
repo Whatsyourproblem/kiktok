@@ -1,0 +1,10 @@
+<view wx:for="{{listArr}}" wx:key="*this">{{index+1}}、{{item}}</view>
+
+<text decode>&nbsp;</text>
+
+<view wx:for="{{listArr}}" wx:for-index="i" wx:for-item="content" wx:key="*this">{{i+1}}.{{content}}</view>
+<text decode>&nbsp;</text>
+
+<view wx:for="{{listObj}}" wx:key="*this">
+  <text>{{item.title}}</text>-<text>{{item.time}}</text>
+</view>
