@@ -1,7 +1,9 @@
 {
+
   "desc": "www.baidu.com",
   "rules": [{
   "action": "allow",
   "page": "*"
   }]
+  
 }
