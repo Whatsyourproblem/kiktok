@@ -13,6 +13,7 @@
     "pages/fansAndAttention/fansAndAttention",
     "pages/otherUserInfo/otherUserInfo"
   ],
+  
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
@@ -22,6 +23,7 @@
     "navigationBarTextStyle": "black",
     "backgroundColorTop": "black"
   },
+  
   "tabBar": {
     "backgroundColor": "#000000",
     "list": [
